@@ -9,6 +9,24 @@ var app = new Vue (
                 "https://www.zingarate.com/pictures/2020/12/15/odle.jpeg",
                 "https://www.greenme.it/wp-content/uploads/2015/11/paesaggi-.jpg"
             ],
+            imagesIndex: 0
+        },
+        methods: {
+            nextImage: function () {
+                this.imagesIndex++;
+
+                if(this.imagesIndex == this.images.lenght){
+                    this.imagesIndex = 0;
+                }
+            },
+            
+            prevImage: function (){
+                this.imagesIndex--;
+
+                if(this.imagesIndex == -1){
+                    this.imagesIndex = this.images.lenght -1
+                }
+            }
         }
     }
 );

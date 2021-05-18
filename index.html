@@ -13,15 +13,15 @@
         <div id="root">
             <div class="container">
             <div class="prev">
-                <i class="fas fa-angle-left"></i>
+                <i class="fas fa-angle-left" @click="prevImage"></i>
             </div>
 
             <div class="photo">
-                <img :src=images>
+                <img :src=images[imagesIndex]>
             </div>
 
             <div class="next">
-                <i class="fas fa-angle-right"></i>
+                <i class="fas fa-angle-right" @click="nextImage"></i>
             </div>
 
             </div>
