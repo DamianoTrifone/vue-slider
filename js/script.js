@@ -24,7 +24,7 @@ var app = new Vue (
                 this.imagesIndex--;
 
                 if(this.imagesIndex == -1){
-                    this.imagesIndex = this.images.lenght -1
+                    this.imagesIndex = this.images.lenght = 4;
                 }
             }
         }

@@ -12,19 +12,26 @@
     <body>
         <div id="root">
             <div class="container">
-            <div class="prev">
-                <i class="fas fa-angle-left" @click="prevImage"></i>
-            </div>
+                <div class="prev">
+                    <i class="fas fa-angle-left" @click="prevImage"></i>
+                </div>
 
-            <div class="photo">
-                <img :src=images[imagesIndex]>
-            </div>
+                <div class="photo">
+                    <img :src=images[imagesIndex]>
+                </div>
 
-            <div class="next">
-                <i class="fas fa-angle-right" @click="nextImage"></i>
-            </div>
+                <div class="next">
+                    <i class="fas fa-angle-right" @click="nextImage"></i>
+                </div>
 
-            </div>
+                <div class="selettori">
+                    <ul>
+                        <li v-for="image, index in images">
+                            <i :class="index == imagesIndex ? 'far' : 'fa' " class="fa-circle" @click="imagesIndex = index"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
         </div>
         <script src="js/script.js"></script>
     </body>
