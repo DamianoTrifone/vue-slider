@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: cornflowerblue;
 }
 
 body{
-    background-color: yellow;
     width: 100vh;
     height: 100%;
 }
@@ -13,10 +13,12 @@ body{
 .container{
     width: 700px;
     height: 100%;
-    background-color: green;
     margin: auto;
     display: flex;
     align-self: center;
+    margin-left: 150px;
+    margin-top: 25%;
+    margin-left: 53%;
 }
 
 .prev,
@@ -38,6 +40,18 @@ body{
 }
 
 .selettori li{
-    color: honeydew;
+    color: black;
     list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    float: left;
+    text-align: center;
+}
+
+h1{
+    margin-left: 430px;
+    width: 100%;
 }

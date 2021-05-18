@@ -10,6 +10,7 @@
         <title>Document</title>
     </head>
     <body>
+        <!-- <h1>Scorri per scoprire le opzioni della tua prossima vacanza</h1> -->
         <div id="root">
             <div class="container">
                 <div class="prev">
@@ -18,18 +19,17 @@
 
                 <div class="photo">
                     <img :src=images[imagesIndex]>
+                    <div class="selettori">
+                        <ul>
+                            <li v-for="image, index in images">
+                                <i :class="index == imagesIndex ? 'far' : 'fa' " class="fa-circle" @click="imagesIndex = index"></i>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="next">
                     <i class="fas fa-angle-right" @click="nextImage"></i>
-                </div>
-
-                <div class="selettori">
-                    <ul>
-                        <li v-for="image, index in images">
-                            <i :class="index == imagesIndex ? 'far' : 'fa' " class="fa-circle" @click="imagesIndex = index"></i>
-                        </li>
-                    </ul>
                 </div>
             </div>    
         </div>
